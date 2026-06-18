@@ -1,0 +1,174 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: all var(--transition-normal);
+  padding: 1.2rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.navbar-scrolled {
+  padding: 0.7rem 0;
+  background: rgba(253, 250, 249, 0.85);
+  box-shadow: var(--shadow-md);
+  border-bottom: 1px solid rgba(255, 133, 161, 0.1);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.logo-pepa {
+  font-family: var(--font-title);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--color-pink-dark);
+  font-style: italic;
+}
+
+.logo-pelukera {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: var(--color-plum-dark);
+  margin-top: -2px;
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+}
+
+.navbar-links {
+  display: flex;
+  list-style: none;
+  gap: var(--spacing-lg);
+}
+
+.navbar-links a {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-text-dark);
+  position: relative;
+  padding: 0.25rem 0;
+}
+
+.navbar-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--color-pink-brand);
+  transition: var(--transition-fast);
+}
+
+.navbar-links a:hover {
+  color: var(--color-pink-dark);
+}
+
+.navbar-links a:hover::after {
+  width: 100%;
+}
+
+.navbar-cta-mobile {
+  display: none;
+}
+
+.navbar-hamburger {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1010;
+}
+
+.navbar-hamburger .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all var(--transition-normal);
+  background-color: var(--color-plum-dark);
+  border-radius: var(--radius-full);
+}
+
+/* Responsive Nav styles */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem 0;
+  }
+
+  .navbar-hamburger {
+    display: block;
+  }
+
+  /* Hamburger Animation */
+  .navbar-hamburger.is-active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .navbar-hamburger.is-active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+    background-color: var(--color-pink-dark);
+  }
+  .navbar-hamburger.is-active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+    background-color: var(--color-pink-dark);
+  }
+
+  .navbar-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 300px;
+    height: 100vh;
+    background: var(--color-bg-white);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -10px 0 30px rgba(33, 11, 26, 0.05);
+    transition: var(--transition-slow);
+    z-index: 1005;
+    padding: var(--spacing-xl) var(--spacing-md);
+  }
+
+  .navbar-menu.is-open {
+    right: 0;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .navbar-links a {
+    font-size: 1.2rem;
+  }
+
+  .navbar-cta-mobile {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar-cta-desktop {
+    display: none;
+  }
+}
