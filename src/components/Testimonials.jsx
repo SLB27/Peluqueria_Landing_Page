@@ -6,7 +6,7 @@ const TESTIMONIALS_DATA = [
     name: 'Laura Martín',
     role: 'Cliente Habitual (Balayage)',
     quote: '¡El mejor balayage que me he hecho jamás! Pepa entendió perfectamente lo que quería y cuidó mi cabello con un mimo increíble. El salón es precioso y los detalles en rosa te hacen sentir en un palacio de relajación.',
-    rating: 5,
+    rating: 3,
     avatar: '👩'
   },
   {

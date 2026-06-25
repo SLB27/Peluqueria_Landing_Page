@@ -46,6 +46,7 @@
   --transition-fast: 0.2s ease;
   --transition-normal: 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   --transition-slow: 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  user-select: none;
 }
 
 /* Base resets & styles */

@@ -38,7 +38,7 @@ export default function Hero() {
             </div>
             <div className="stat-divider"></div>
             <div className="stat-item">
-              <span className="stat-number">5.0★</span>
+              <span className="stat-number">4.5★</span>
               <span className="stat-label">Valoración Clientes</span>
             </div>
           </div>
@@ -58,7 +58,6 @@ export default function Hero() {
             <span className="badge-icon">✨</span>
             <div className="badge-text">
               <h4>Atención VIP</h4>
-              {/* <p>Diagnóstico gratis</p> */}
             </div>
           </div>
         </div>

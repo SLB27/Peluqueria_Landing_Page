@@ -18,31 +18,17 @@ const GALLERY_ITEMS = [
   },
   {
     id: 3,
-    title: 'Manicura Glitter Rose',
-    category: 'manicura',
-    image: '/manicure.png',
-    description: 'Uñas acrílicas con destellos y detalles en foil de oro rosa.'
-  },
-  {
-    id: 4,
     title: 'Corte Bob Desfilado',
     category: 'peinado',
     image: '/updo.png', // Fallback or reused
     description: 'Corte moderno con textura y movimiento natural.'
   },
   {
-    id: 5,
+    id: 4,
     title: 'Balayage Vainilla & Caramelo',
     category: 'color',
     image: '/balayage.png', // Fallback or reused
     description: 'Contraste cálido y luminoso para bases oscuras.'
-  },
-  {
-    id: 6,
-    title: 'Diseño Minimalista Pastel',
-    category: 'manicura',
-    image: '/manicure.png', // Fallback or reused
-    description: 'Esmaltado semipermanente con motivos geométricos.'
   }
 ];
 
@@ -57,7 +43,7 @@ export default function Gallery() {
     <section id="galeria" className="gallery-section section">
       <div className="container">
         <div className="section-header">
-          <span className="subtitle">Portafolio</span>
+          <span className="subtitle">Galería</span>
           <h2>Nuestras Creaciones</h2>
           <p>
             Mira el resultado de nuestro trabajo. Diseños únicos creados con pasión y
@@ -85,12 +71,6 @@ export default function Gallery() {
           >
             Cortes & Peinados
           </button>
-          <button 
-            className={`filter-btn ${activeFilter === 'manicura' ? 'active' : ''}`}
-            onClick={() => setActiveFilter('manicura')}
-          >
-            Manicura
-          </button>
         </div>
 
         {/* Image Grid */}
@@ -102,7 +82,7 @@ export default function Gallery() {
                 <div className="gallery-overlay">
                   <div className="overlay-content">
                     <span className="item-category-label">
-                      {item.category === 'color' ? 'Coloración' : item.category === 'peinado' ? 'Peinado' : 'Manicura'}
+                      {item.category === 'color' ? 'Coloración' : 'Peinado' }
                     </span>
                     <h4 className="item-title">{item.title}</h4>
                     <p className="item-description">{item.description}</p>

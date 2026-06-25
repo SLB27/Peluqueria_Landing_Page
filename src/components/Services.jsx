@@ -35,35 +35,6 @@ const SERVICES_DATA = [
       </svg>
     ),
     features: ['Tintes sin amoníaco', 'Terapia Olaplex protectora', 'Brillo espejo de larga duración']
-  },
-  {
-    id: 'tratamiento',
-    title: 'Tratamientos de Cuidado',
-    subtitle: 'Salud y Nutrición',
-    description: 'Tratamientos reconstructores, alisados orgánicos de queratina e hidrataciones intensivas con ácido hialurónico.',
-    price: 'desde 35€',
-    duration: '45-90 min',
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-      </svg>
-    ),
-    features: ['Hidratación profunda molecular', 'Reconstrucción celular de queratina', 'Diagnóstico con microcámara']
-  },
-  {
-    id: 'estetica',
-    title: 'Manicura & Estética',
-    subtitle: 'Detalles que Destacan',
-    description: 'Manicura semipermanente de diseño, reconstrucción de uñas de gel y servicios de maquillaje profesional para tus ocasiones más especiales.',
-    price: 'desde 20€',
-    duration: '30-75 min',
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 10 21 8 19.5 6.5C18 5 16 4 14 3.5L12 2Z" />
-        <path d="M12 6V12L16 14" />
-      </svg>
-    ),
-    features: ['Nail Art a mano alzada', 'Productos veganos y no tóxicos', 'Tratamiento spa para manos']
   }
 ];
 
@@ -72,7 +43,7 @@ export default function Services() {
     <section id="servicios" className="services-section section">
       <div className="container">
         <div className="section-header">
-          <span className="subtitle">Nuestras Especialidades</span>
+          <span className="subtitle">Nuestros Servicios</span>
           <h2>Servicios Exclusivos</h2>
           <p>
             Trabajamos con marcas líderes internacionales para asegurar el brillo, 
