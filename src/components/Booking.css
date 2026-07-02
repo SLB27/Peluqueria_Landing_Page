@@ -1,3 +1,14 @@
+.btn-booking {
+  background: linear-gradient(149deg, var(--color-bg-green));
+  color: var(--color-text-dark);
+  box-shadow: 0 4px 15px rgba(194, 65, 108, 0.3);
+}
+
+.btn-booking:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(194, 65, 108, 0.4);
+}
+
 .booking-section {
   background: var(--color-bg-light);
   border-top: 1px solid rgba(255, 133, 161, 0.1);
@@ -102,6 +113,13 @@
   text-align: center;
 }
 
+.form-title span {
+  font-size: 1.6rem;
+  margin-bottom: var(--spacing-md);
+  color: var(--color-text-green);
+  text-align: center;
+}
+
 .form-group {
   margin-bottom: var(--spacing-sm);
   display: flex;
@@ -122,7 +140,7 @@
   padding: 0.8rem 1rem;
   font-size: 0.92rem;
   font-family: var(--font-body);
-  background-color: var(--color-pink-soft);
+  background-color: var(--color-green-soft);
   border: 1.5px solid transparent;
   border-radius: var(--radius-md);
   outline: none;
@@ -138,9 +156,9 @@
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
-  border-color: var(--color-pink-brand);
+  border-color: var(--color-green-medium);
   background-color: var(--color-bg-white);
-  box-shadow: 0 0 0 3px rgba(255, 133, 161, 0.15);
+  box-shadow: 0 0 0 3px rgba(60, 255, 76, 0.15);
 }
 
 .form-row {

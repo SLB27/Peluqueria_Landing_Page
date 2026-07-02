@@ -2,6 +2,9 @@
   /* Color Palette */
   --color-bg-light: #fdfaf9;
   --color-bg-white: #ffffff;
+  --color-bg-green: #73fa7f;
+  --color-green-soft: #e6f9e6;
+  --color-green-medium: #73fa7f;
   --color-pink-soft: #fff0f3;
   --color-pink-light: #ffccd5;
   --color-pink-medium: #ffb3c1;
@@ -15,6 +18,7 @@
   --color-text-dark: #2d1e29;
   --color-text-muted: #6b5a67;
   --color-text-light: #ffffff;
+  --color-text-green: #4afc59;
 
   /* Typography */
   --font-title: 'Playfair Display', serif;
@@ -183,7 +187,6 @@ a {
 .btn-primary:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 20px rgba(194, 65, 108, 0.4);
-  background: linear-gradient(135deg, var(--color-pink-dark), var(--color-plum-dark));
 }
 
 .btn-secondary {

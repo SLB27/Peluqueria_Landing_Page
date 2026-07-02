@@ -34,15 +34,15 @@ export default function Footer() {
           <ul className="hours-list">
             <li>
               <span className="day">Lunes</span>
-              <span className="time">10:00 - 01:30</span>
+              <span className="time">10:00 - 13:00</span>
             </li>
             <li>
               <span className="day">Martes - Viernes</span>
-              <span className="time">10:00 - 01:30, 04:30 - 07:00</span>
+              <span className="time">10:00 - 13:30, 16:30 - 19:00</span>
             </li>
             <li>
               <span className="day">Sábado</span>
-              <span className="time">09:00 - 02:00</span>
+              <span className="time">09:00 - 14:00</span>
             </li>
             <li>
               <span className="day">Domingos & Festivos</span>
@@ -76,10 +76,10 @@ export default function Footer() {
       <div className="footer-bottom">
         <div className="container bottom-container">
           <p>&copy; {currentYear} Pepa Peluquería. Todos los derechos reservados.</p>
-          <div className="legal-links">
+          {/* <div className="legal-links">
             <a href="#privacidad">Política de Privacidad</a>
             <a href="#terminos">Términos de Uso</a>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>

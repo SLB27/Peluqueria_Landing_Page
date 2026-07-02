@@ -11,6 +11,14 @@ export default function Booking() {
     notes: ''
   });
 
+  const [MENSAJE] = useState(`Hola, me gustaría reservar una cita en Pepa Peluquería. Aquí están los detalles:
+- Nombre: ${formData.name}
+- Teléfono: ${formData.phone}
+- Servicio: ${formData.service}
+- Fecha: ${formData.date}
+- Hora: ${formData.time}
+- Notas: ${formData.notes || 'Ninguna'}`);
+
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [error, setError] = useState('');
 
@@ -53,7 +61,7 @@ export default function Booking() {
         <div className="booking-grid">
           {/* Info Side */}
           <div className="booking-info">
-            <span className="booking-tagline">Reserva Online</span>
+            <span className="booking-tagline">Contactanos</span>
             <h2>Reserva tu momento de mimos</h2>
             <p className="booking-desc">
               Selecciona el servicio, el día y la hora que mejor te vengan. Si tienes dudas, 
@@ -65,7 +73,8 @@ export default function Booking() {
                 <div className="info-icon">🕒</div>
                 <div className="info-text">
                   <h4>Horario de Apertura</h4>
-                  <p>Lunes a Viernes: 09:30 - 20:00</p>
+                  <p>Lunes: 10:00 - 13:00</p>
+                  <p>Martes a Viernes: 10:30 - 13:30, 16:30 - 19:00</p>
                   <p>Sábados: 09:00 - 14:00</p>
                 </div>
               </div>
@@ -74,15 +83,7 @@ export default function Booking() {
                 <div className="info-icon">📍</div>
                 <div className="info-text">
                   <h4>Dónde Estamos</h4>
-                  <p>Calle de la Belleza, 14, Madrid, España</p>
-                </div>
-              </div>
-
-              <div className="info-item">
-                <div className="info-icon">📞</div>
-                <div className="info-text">
-                  <h4>Contacto Directo</h4>
-                  <p>+34 600 000 000 (Llamadas & WhatsApp)</p>
+                  <p>Calle Calamón, 29140 Churriana, Málaga</p>
                 </div>
               </div>
             </div>
@@ -97,96 +98,96 @@ export default function Booking() {
           {/* Form Side */}
           <div className="booking-form-wrapper" id="booking-form-container">
             {!isSubmitted ? (
-              <form onSubmit={handleSubmit} className="booking-form glass">
-                <h3 className="form-title">Nueva Cita</h3>
-                
-                {error && <div className="form-error-msg">{error}</div>}
+                <form onSubmit={handleSubmit} className="booking-form glass">
+                  <h3 className="form-title">Manda un <span>Whatsapp</span></h3>
+                  
+                  {error && <div className="form-error-msg">{error}</div>}
 
-                <div className="form-group">
-                  <label htmlFor="name">Nombre Completo *</label>
-                  <input 
-                    type="text" 
-                    id="name" 
-                    name="name" 
-                    placeholder="Tu nombre y apellidos"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
-
-                <div className="form-group">
-                  <label htmlFor="phone">Número de Teléfono / WhatsApp *</label>
-                  <input 
-                    type="tel" 
-                    id="phone" 
-                    name="phone" 
-                    placeholder="Ej. +34 600 000 000"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
-
-                <div className="form-group">
-                  <label htmlFor="service">Servicio Deseado *</label>
-                  <select 
-                    id="service" 
-                    name="service"
-                    value={formData.service}
-                    onChange={handleChange}
-                    required
-                  >
-                    <option value="" disabled>Selecciona un servicio</option>
-                    <option value="Corte & Peinado">Corte & Peinado (desde 25€)</option>
-                    <option value="Coloración Premium">Coloración Premium (desde 65€)</option>
-                    <option value="Tratamientos de Cuidado">Tratamiento de Cuidado (desde 35€)</option>
-                    <option value="Manicura & Estética">Manicura & Estética (desde 20€)</option>
-                  </select>
-                </div>
-
-                <div className="form-row">
                   <div className="form-group">
-                    <label htmlFor="date">Fecha *</label>
+                    <label htmlFor="name">Nombre Completo *</label>
                     <input 
-                      type="date" 
-                      id="date" 
-                      name="date"
-                      value={formData.date}
+                      type="text" 
+                      id="name" 
+                      name="name" 
+                      placeholder="Tu nombre y apellidos"
+                      value={formData.name}
                       onChange={handleChange}
                       required
                     />
                   </div>
 
                   <div className="form-group">
-                    <label htmlFor="time">Hora *</label>
+                    <label htmlFor="phone">Número de Teléfono / WhatsApp *</label>
                     <input 
-                      type="time" 
-                      id="time" 
-                      name="time"
-                      value={formData.time}
+                      type="tel" 
+                      id="phone" 
+                      name="phone" 
+                      placeholder="Ej. +34 600 000 000"
+                      value={formData.phone}
                       onChange={handleChange}
                       required
                     />
                   </div>
-                </div>
 
-                <div className="form-group">
-                  <label htmlFor="notes">Notas o Comentarios (Opcional)</label>
-                  <textarea 
-                    id="notes" 
-                    name="notes" 
-                    rows="3"
-                    placeholder="Cuéntanos si tienes alguna preferencia o necesidad especial..."
-                    value={formData.notes}
-                    onChange={handleChange}
-                  ></textarea>
-                </div>
+                  <div className="form-group">
+                    <label htmlFor="service">Servicio Deseado *</label>
+                    <select 
+                      id="service" 
+                      name="service"
+                      value={formData.service}
+                      onChange={handleChange}
+                      required
+                    >
+                      <option value="" disabled>Selecciona un servicio</option>
+                      <option value="Corte & Peinado">Corte & Peinado</option>
+                      <option value="Coloración Premium">Coloración Premium</option>
+                    </select>
+                  </div>
 
-                <button type="submit" className="btn btn-primary form-submit-btn">
-                  Confirmar Reserva
-                </button>
-              </form>
+                  <div className="form-row">
+                    <div className="form-group">
+                      <label htmlFor="date">Fecha *</label>
+                      <input 
+                        type="date" 
+                        id="date" 
+                        name="date"
+                        value={formData.date}
+                        onChange={handleChange}
+                        required
+                      />
+                    </div>
+
+                    <div className="form-group">
+                      <label htmlFor="time">Hora *</label>
+                      <input 
+                        type="time" 
+                        id="time" 
+                        name="time"
+                        value={formData.time}
+                        onChange={handleChange}
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <div className="form-group">
+                    <label htmlFor="notes">Notas o Comentarios (Opcional)</label>
+                    <textarea 
+                      id="notes" 
+                      name="notes" 
+                      rows="3"
+                      placeholder="Cuéntanos si tienes alguna preferencia o necesidad especial..."
+                      value={formData.notes}
+                      onChange={handleChange}
+                    ></textarea>
+                  </div>
+
+                  <button type="submit" className="btn btn-booking form-submit-btn">
+                    <a href={`https://wa.me/34646688589?text=${MENSAJE}`}>
+                        Reservar Cita
+                    </a>
+                  </button>
+                </form>
             ) : (
               <div className="booking-success-card glass animate-fade-in">
                 <div className="success-icon-wrapper">
@@ -211,7 +212,6 @@ export default function Booking() {
                     <span className="summary-val">{formData.date} a las {formData.time} hs</span>
                   </div>
                 </div>
-
                 <button onClick={handleReset} className="btn btn-secondary success-btn">
                   Hacer Otra Reserva
                 </button>
