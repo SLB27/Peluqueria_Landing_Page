@@ -65,7 +65,7 @@ export default function Footer() {
             </p>
             <p className="email-line">
               <span className="contact-icon">✉</span>
-              <a href="mailto:hola@pepapelukera.com">hola@pepapelukera.com</a>
+              <a href="mailto:pelukera82maria@gmail.com">Email</a>
             </p>
           </address>
         </div>
