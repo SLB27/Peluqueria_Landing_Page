@@ -35,7 +35,7 @@ export default function Booking() {
 
     setError('');
     setIsSubmitted(true);
-    window.open(`https://wa.me/34622527901?text=${MENSAJE}`, '_blank');
+    window.open(`https://wa.me/34646688589?text=${MENSAJE}`, '_blank');
   };
 
   const handleReset = () => {
