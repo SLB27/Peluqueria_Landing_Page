@@ -4,21 +4,15 @@ import './Booking.css';
 export default function Booking() {
   const [formData, setFormData] = useState({
     name: '',
-    phone: '',
     service: '',
     date: '',
     time: '',
     notes: ''
   });
 
-  const [MENSAJE] = useState(`Hola, me gustaría reservar una cita en Pepa Peluquería. Aquí están los detalles:
-- Nombre: ${formData.name}
-- Teléfono: ${formData.phone}
-- Servicio: ${formData.service}
-- Fecha: ${formData.date}
-- Hora: ${formData.time}
-- Notas: ${formData.notes || 'Ninguna'}`);
 
+  const MENSAJE = `Hola, Soy ${formData.name} y me gustaría reservar una cita el dia ${formData.date} a las ${formData.time} para el servicio de ${formData.service}. ${formData.notes ? `Notas: ${formData.notes}` : ''}`;
+  
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [error, setError] = useState('');
 
@@ -32,21 +26,21 @@ export default function Booking() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const { name, phone, service, date, time } = formData;
+    const { name, service, date, time } = formData;
     
-    if (!name || !phone || !service || !date || !time) {
+    if (!name || !service || !date || !time) {
       setError('Por favor, rellena todos los campos obligatorios.');
       return;
     }
 
     setError('');
     setIsSubmitted(true);
+    window.open(`https://wa.me/34622527901?text=${MENSAJE}`, '_blank');
   };
 
   const handleReset = () => {
     setFormData({
       name: '',
-      phone: '',
       service: '',
       date: '',
       time: '',
@@ -117,19 +111,6 @@ export default function Booking() {
                   </div>
 
                   <div className="form-group">
-                    <label htmlFor="phone">Número de Teléfono / WhatsApp *</label>
-                    <input 
-                      type="tel" 
-                      id="phone" 
-                      name="phone" 
-                      placeholder="Ej. +34 600 000 000"
-                      value={formData.phone}
-                      onChange={handleChange}
-                      required
-                    />
-                  </div>
-
-                  <div className="form-group">
                     <label htmlFor="service">Servicio Deseado *</label>
                     <select 
                       id="service" 
@@ -183,9 +164,7 @@ export default function Booking() {
                   </div>
 
                   <button type="submit" className="btn btn-booking form-submit-btn">
-                    <a href={`https://wa.me/34646688589?text=${MENSAJE}`}>
                         Reservar Cita
-                    </a>
                   </button>
                 </form>
             ) : (
