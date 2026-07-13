@@ -90,7 +90,7 @@
 }
 
 /* Features checklist */
-.service-features-list {
+/* .service-features-list {
   list-style: none;
   margin-bottom: var(--spacing-lg);
   display: flex;
@@ -109,7 +109,7 @@
 .check-icon {
   color: var(--color-pink-brand);
   font-weight: bold;
-}
+} */
 
 /* Card footer details */
 .service-card-footer {
@@ -144,39 +144,25 @@
 }
 
 /* Free diagnostic banner */
-/* .services-footer-banner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.services-footer-banner {
+  text-align: center;
   padding: var(--spacing-lg) var(--spacing-xl);
   border-radius: var(--radius-lg);
   border: 1px solid rgba(255, 133, 161, 0.2);
   margin-top: var(--spacing-xl);
   background: linear-gradient(135deg, rgba(255, 240, 243, 0.8), rgba(253, 250, 249, 0.9));
-} */
-
-/* .banner-content {
-  max-width: 65%;
 }
 
 .banner-content h3 {
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin-bottom: 0.4rem;
+  color: var(--color-pink-brand);
 }
 
-.banner-content p {
-  font-size: 0.95rem;
-} */
-
-/* Responsive
+/* Responsive*/
 @media (max-width: 992px) {
   .services-footer-banner {
-    flex-direction: column;
-    text-align: center;
     gap: var(--spacing-md);
     padding: var(--spacing-lg);
   }
-  .banner-content {
-    max-width: 100%;
-  }
-} */
+} 

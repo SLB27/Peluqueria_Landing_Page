@@ -1,44 +1,115 @@
 import './Services.css';
+import { Drops, Scissor12, ScissorsCoupon2, Water, Colorfilter2, ColorSwatch2, Bucket2, SideProfile, Tornado } from 'reicon-react';
+
 
 const SERVICES_DATA = [
   {
-    id: 'corte',
-    title: 'Corte & Peinado',
-    subtitle: 'Estilo y Definición',
-    description: 'Cortes personalizados que se adaptan a tus facciones y estilo de vida, finalizados con peinados espectaculares.',
-    price: 'desde 25€',
-    duration: '45-60 min',
+    id: 'Solo cortar',
+    title: 'Solo Corte',
+    subtitle: 'Corte Personalizado',
+    description: 'Cortes personalizados que se adaptan a tus facciones y estilo de vida.',
+    price: 'desde 15€',
+    duration: '15-30 min',
     icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="6" cy="6" r="3" />
-        <circle cx="6" cy="18" r="3" />
-        <line x1="20" y1="4" x2="8.12" y2="15.88" />
-        <line x1="14.47" y1="14.48" x2="20" y2="20" />
-        <line x1="8.12" y1="8.12" x2="12" y2="12" />
-      </svg>
-    ),
-    features: ['Diagnóstico facial gratuito', 'Lavado con masaje capilar', 'Productos hidratantes incluidos']
+      <Scissor12 size={24} weight="Filled" />
+    )
   },
   {
-    id: 'color',
-    title: 'Coloración Premium',
-    subtitle: 'Brillo y Dimensión',
-    description: 'Expertos en técnicas de tendencia como Balayage, Babylights y aclarados naturales que protegen la salud de tu fibra capilar.',
-    price: 'desde 65€',
-    duration: '120-180 min',
+    id: 'Lavar + Peinar',
+    title: 'Lavado y Peinado',
+    subtitle: 'Cuidado y Estilo',
+    description: 'Lavados profesionales con masaje capilar y peinados que resaltan tu estilo personal.',
+    price: 'desde 20€',
+    duration: '30-45 min',
     icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 14.7255 3.09032 17.1962 4.85857 19" />
-        <path d="M16 10.5C16 11.8807 14.8807 13 13.5 13C12.1193 13 11 11.8807 11 10.5C11 9.11929 12.1193 8 13.5 8C14.8807 8 16 9.11929 16 10.5Z" />
-        <path d="M9 15.5C9 16.8807 7.88071 18 6.5 18C5.11929 18 4 16.8807 4 15.5C4 14.1193 5.11929 13 6.5 13C7.88071 13 9 14.1193 9 15.5Z" />
-        <path d="M18.5 15.5C18.5 16.8807 17.3807 18 16 18C14.6193 18 13.5 16.8807 13.5 15.5C13.5 14.1193 14.6193 13 16 13C17.3807 13 18.5 14.1193 18.5 15.5Z" />
-      </svg>
-    ),
-    features: ['Tintes sin amoníaco', 'Terapia Olaplex protectora', 'Brillo espejo de larga duración']
+      <Water size={24} />
+    )
+  },
+  {
+    id: 'Lavar + Cortar + Peinar',
+    title: 'Lavado, Corte y Peinado',
+    subtitle: 'Cuidado y Estilo',
+    description: 'Lavados profesionales con masaje capilar, cortes personalizados y peinados.',
+    price: 'desde 35€',
+    duration: '45-60 min',
+    icon: (
+      <Drops size={24} weight="Filled" />
+    )
+  },
+  {
+    id: 'Color + Cortar',
+    title: 'Coloración y Corte',
+    subtitle: 'Brillo y Dimensión',
+    description: 'Coloración profesional con productos de alta calidad, combinada con cortes que realzan tu estilo.',
+    price: 'desde 40€',
+    duration: '60-80 min',
+    icon: (
+      <ScissorsCoupon2 size={24} weight="Filled" />
+    )
+  },
+  {
+    id: 'Color + Cortar + Peinar',
+    title: 'Coloración, Corte y Peinado',
+    subtitle: 'Brillo y Estilo',
+    description: 'Coloración profesional con productos de alta calidad, combinada con cortes y peinados que embellecen tu estilo.',
+    price: 'desde 55€',
+    duration: '80-100 min',
+    icon: (
+      <Colorfilter2 size={24} weight="Filled" />
+    )
+  },
+  {
+    id: 'Color + 1/2 Mechas + Peinar',
+    title: 'Coloración, 1/2 Mechas y Peinado',
+    subtitle: 'Brillo y Estilo',
+    description: 'Coloración profesional con productos de alta calidad, combinada con mechas parciales y peinado.',
+    price: 'desde 65€',
+    duration: '80-100 min',
+    icon: (
+      <Bucket2 size={24} weight="Filled" />
+    )
+  },
+  {
+    id: '1/2 Cabeza Mechas',
+    title: '1/2 Cabeza de Mechas',
+    subtitle: 'Brillo y Dimensión',
+    description: 'Mechas parciales para añadir brillo y dimensión a tu cabello, con productos de alta calidad.',
+    price: 'desde 65€',
+    duration: '80-100 min',
+    icon: (
+      <ColorSwatch2 size={24} weight="Filled" />
+    )
+  },
+  {
+    id: 'Mechas Cabeza Completa',
+    title: 'Cabeza Completa de Mechas',
+    subtitle: 'Brillo y Dimensión',
+    description: 'Mechas completas para añadir brillo y dimensión a tu cabello, con productos de alta calidad.',
+    price: 'desde 85€',
+    duration: '100-120 min',
+    icon: (
+      <SideProfile size={24} weight="Filled" />
+    )
+  },
+  {
+    id: 'Permanente',
+    title: 'Tratamiento Permanente',
+    subtitle: 'Cuidado y Estilo',
+    description: 'Tratamiento permanente para mejorar la salud y apariencia de tu cabello.',
+    price: 'desde 70€',
+    duration: '60-80 min',
+    icon: (
+      <Tornado size={24} />
+    )
   }
 ];
 
-export default function Services() {
+export default function Services({ onSelectService }) {
+  const handleReserve = (serviceId) => {
+    onSelectService(serviceId);
+    document.getElementById('reservar').scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <section id="servicios" className="services-section section">
       <div className="container">
@@ -60,37 +131,29 @@ export default function Services() {
               <span className="service-card-subtitle">{service.subtitle}</span>
               <h3 className="service-card-title">{service.title}</h3>
               <p className="service-card-desc">{service.description}</p>
-              
-              <ul className="service-features-list">
-                {service.features.map((feature, i) => (
-                  <li key={i}>
-                    <span className="check-icon">✓</span> {feature}
-                  </li>
-                ))}
-              </ul>
 
               <div className="service-card-footer">
                 <div className="service-meta">
                   <span className="price-tag">{service.price}</span>
                   <span className="duration-tag">{service.duration}</span>
                 </div>
-                <a href="#reservar" className="btn btn-outline service-btn">
+                <button
+                  type="button"
+                  className="btn btn-outline service-btn"
+                  onClick={() => handleReserve(service.id)}
+                >
                   Reservar
-                </a>
+                </button>
               </div>
             </div>
           ))}
         </div>
 
-        {/* <div className="services-footer-banner glass">
+        <div className="services-footer-banner glass">
           <div className="banner-content">
-            <h3>¿No sabes qué tratamiento elegir?</h3>
-            <p>Agenda un diagnóstico capilar 100% gratuito el día de tu cita. Analizaremos tu tipo de cabello y cuero cabelludo.</p>
+            <h3>¡¡¡Mis precios dependerán del largo y cantidad de tu cabello Mari Pepa!!!</h3>
           </div>
-          <a href="#reservar" className="btn btn-gold">
-            Diagnóstico Gratis
-          </a>
-        </div> */}
+        </div>
       </div>
     </section>
   );

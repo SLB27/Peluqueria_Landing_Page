@@ -1,7 +1,7 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './Booking.css';
 
-export default function Booking() {
+export default function Booking({ selectedService }) {
   const [formData, setFormData] = useState({
     name: '',
     service: '',
@@ -13,6 +13,12 @@ export default function Booking() {
 
   const MENSAJE = `Hola, Soy ${formData.name} y me gustaría reservar una cita el dia ${formData.date} a las ${formData.time} para el servicio de ${formData.service}. ${formData.notes ? `Notas: ${formData.notes}` : ''}`;
   
+  useEffect(() => {
+    if (selectedService) {
+      setFormData(prev => ({ ...prev, service: selectedService }));
+    }
+  }, [selectedService]);
+
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [error, setError] = useState('');
 
@@ -120,8 +126,15 @@ export default function Booking() {
                       required
                     >
                       <option value="" disabled>Selecciona un servicio</option>
-                      <option value="Corte & Peinado">Corte & Peinado</option>
-                      <option value="Coloración Premium">Coloración Premium</option>
+                      <option value="Solo cortar">Solo Corte</option>
+                      <option value="Lavar + Peinar">Lavado & Peinado</option>
+                      <option value="Lavar + Cortar + Peinar">Lavado, Corte & Peinado</option>
+                      <option value="Color + Cortar">Coloración & Corte</option>
+                      <option value="Color + Cortar + Peinar">Coloración, Corte & Peinado</option>
+                      <option value="Color + 1/2 Mechas + Peinar">Coloración, 1/2 Mechas & Peinado</option>
+                      <option value="1/2 Cabeza Mechas">1/2 Cabeza de Mechas</option>
+                      <option value="Mechas Cabeza Completa">Cabeza Completa de Mechas</option>
+                      <option value="Permanente">Permanente</option>
                     </select>
                   </div>
 

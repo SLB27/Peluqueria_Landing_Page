@@ -63,7 +63,7 @@ export default function Navbar() {
             </li>
           </ul>
           <div className="navbar-cta-mobile">
-            <a href="#reservar" className="btn btn-primary" onClick={closeMenu}>
+            <a href="#reservar" className="btn btn-gold" onClick={closeMenu}>
               Reservar Cita
             </a>
           </div>
@@ -71,7 +71,7 @@ export default function Navbar() {
 
         {/* Desktop Call to Action */}
         <div className="navbar-cta-desktop">
-          <a href="#reservar" className="btn btn-primary">
+          <a href="#reservar" className="btn btn-gold">
             Reservar Cita
           </a>
         </div>

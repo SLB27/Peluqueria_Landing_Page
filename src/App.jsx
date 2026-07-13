@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Services from './components/Services';
@@ -8,15 +9,17 @@ import Footer from './components/Footer';
 import Map from './components/Map';
 
 function App() {
+  const [selectedService, setSelectedService] = useState('');
+
   return (
     <div>
       <Navbar />
       <Hero />
-      <Services />
+      <Services onSelectService={setSelectedService} />
       <Gallery />
       <Testimonials />
       <Map />
-      <Booking />
+      <Booking selectedService={selectedService} />
       <Footer />
     </div>
   );
