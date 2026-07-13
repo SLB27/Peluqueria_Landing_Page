@@ -9,7 +9,7 @@ import Map from './components/Map';
 
 function App() {
   return (
-    <div className="app-wrapper">
+    <div>
       <Navbar />
       <Hero />
       <Services />

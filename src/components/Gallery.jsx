@@ -4,31 +4,43 @@ import './Gallery.css';
 const GALLERY_ITEMS = [
   {
     id: 1,
-    title: 'Balayage Oro Rosa',
+    title: 'Mechas naturales con acabado premium',
     category: 'color',
-    image: '/balayage.png',
-    description: 'Aclarado difuminado con matices oro rosa y pastel.'
+    image: '/foto_mechas.jpeg',
+    description: 'Consigue una melena más luminosa sin renunciar a la naturalidad.',
+    url: ''
   },
   {
     id: 2,
-    title: 'Recogido Romántico',
+    title: 'Peinado con ondas Glam estilo Hollywood',
     category: 'peinado',
-    image: '/updo.png',
-    description: 'Recogido de novia con flores preservadas naturales.'
+    image: '/ondas_hollywood.jpeg',
+    description: 'Un look clásico, elegante y sofisticado, ideal para bodas o eventos.',
+    url: ''
   },
   {
     id: 3,
-    title: 'Corte Bob Desfilado',
+    title: 'Peinado muy favorecedor, fresco y con un toque romántico',
     category: 'peinado',
-    image: '/updo.png', // Fallback or reused
-    description: 'Corte moderno con textura y movimiento natural.'
+    image: '/peinado_boda.jpeg', 
+    description: 'Look ideal para invitadas de boda, graduaciones o eventos de noche. ',
+    url: ''
   },
   {
     id: 4,
-    title: 'Balayage Vainilla & Caramelo',
+    title: 'Experta en cambios de look dramáticos y personalizados.',
     category: 'color',
-    image: '/balayage.png', // Fallback or reused
-    description: 'Contraste cálido y luminoso para bases oscuras.'
+    image: '/cambio_look.jpeg', 
+    description: 'Transformamos tu estilo con diseños únicos y personalizados para cada cliente.',
+    url: ''
+  },
+  {
+    id: 5,
+    title: 'Extensiones adhesivas Premium',
+    category: 'color',
+    image: '/extensiones_premium.jpeg', 
+    description: 'Extensiones de alta calidad con acabado natural y duradero.',
+    url: 'https://www.instagram.com/p/DQ1jbbHCOG1/'
   }
 ];
 
@@ -86,9 +98,14 @@ export default function Gallery() {
                     </span>
                     <h4 className="item-title">{item.title}</h4>
                     <p className="item-description">{item.description}</p>
-                    <a href="#reservar" className="item-link">
-                      Quiero este estilo <span>→</span>
-                    </a>
+                    <div className="links-container">
+                      <a href="#reservar" className="item-link">
+                        Quiero este estilo <span>→</span>
+                      </a>
+                      <a href={item.url} className="item-link">
+                        Ver más...
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>

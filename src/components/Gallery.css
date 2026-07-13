@@ -138,6 +138,11 @@
   gap: 8px;
 }
 
+.links-container {
+  display: flex;
+  justify-content: space-between;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .gallery-grid {
