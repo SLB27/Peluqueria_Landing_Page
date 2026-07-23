@@ -8,7 +8,7 @@ const GALLERY_ITEMS = [
     category: 'color',
     image: '/foto_mechas.jpeg',
     description: 'Consigue una melena más luminosa sin renunciar a la naturalidad.',
-    url: ''
+    url: 'https://www.instagram.com/lapepapeluqueria/'
   },
   {
     id: 2,
@@ -16,7 +16,7 @@ const GALLERY_ITEMS = [
     category: 'peinado',
     image: '/ondas_hollywood.jpeg',
     description: 'Un look clásico, elegante y sofisticado, ideal para bodas o eventos.',
-    url: ''
+    url: 'https://www.instagram.com/lapepapeluqueria/'
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ const GALLERY_ITEMS = [
     category: 'peinado',
     image: '/peinado_boda.jpeg', 
     description: 'Look ideal para invitadas de boda, graduaciones o eventos de noche. ',
-    url: ''
+    url: 'https://www.instagram.com/lapepapeluqueria/'
   },
   {
     id: 4,
@@ -32,7 +32,7 @@ const GALLERY_ITEMS = [
     category: 'color',
     image: '/cambio_look.jpeg', 
     description: 'Transformamos tu estilo con diseños únicos y personalizados para cada cliente.',
-    url: ''
+    url: 'https://www.instagram.com/lapepapeluqueria/'
   },
   {
     id: 5,
